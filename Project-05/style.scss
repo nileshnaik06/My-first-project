@@ -1,0 +1,156 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #0E0E0E;
+    color: #D3BFA2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main{
+    height: 100%;
+    width: 100vw;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    nav {
+        height: 3.2vh;
+        width: 70%;
+        background-color: #1e1d1bb4;
+        border: .1px solid #d3bfa233;
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+
+        h2 {
+            cursor: pointer;
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+
+        .c {
+            display: none;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #D3BFA2;
+            padding: .8rem;
+            border: none;
+            letter-spacing: 1px;
+            font-size: 1rem;
+
+        }
+    }
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 .5rem;
+
+    img {
+        margin-top: -12%;
+        width: 14rem;
+        aspect-ratio: 2/2.5;
+        object-fit: cover;
+    }
+
+    h1 {
+        line-height: 1;
+        font-size: 4.2rem;
+        font-weight: 300;
+        text-align: center;
+        i {
+            font-size: 3.9rem;
+        }
+
+    }
+
+    p {
+        width: 80%;
+        padding: 0 0.8rem;
+        margin-top: 8%;
+        font-weight: 300;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+
+.view{
+    margin-top: 8%;
+    display: flex;
+    padding: 0 5rem;
+    width: 100%;
+    justify-content: center;
+
+    .marque{
+        display: flex;
+        align-items: center;
+        width: 60%;
+        overflow: hidden;
+        position: relative;
+
+        &::before{
+            content: "";
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(to right ,#0E0E0E ,transparent );
+            position: absolute;
+            top: 0%;
+            left:5rem;
+        }
+        &::after{
+            content: "";
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(to left ,#0E0E0E, transparent );
+            position: absolute;
+            top: 0%;
+            right: 0;
+        }
+
+        .text{
+            display: flex;
+            gap: .5rem;
+            animation: marque 10s linear infinite both;
+
+
+            p{
+                font-size: 1.22rem;
+                font-weight: 300;
+            }
+        }
+
+    }
+}
+
+
+@keyframes marque{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
